@@ -1,91 +1,243 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Danbobo">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="描述 X 国王有一个地宫宝库。是 n x m 个格子的矩阵。每个格子放一件宝贝。每个宝贝贴着价值标签。地宫的入口在左上角，出口在右下角。小明被带到地宫的入口，国王要求他只能向右或向下行走。走过某个格子时，如果那个格子中的宝贝价值比小明手中任意宝贝价值都大，小明就可以拿起它（当然，也可以不拿）。当小明走到出口时，如果他手中的宝贝恰好是k件，则这些宝贝就可以送给小明。请你帮小明算一算，在给定的局面下，">
+    <meta name="description" content="描述 X 国王有一个地宫宝库。是 n x m 个格子的矩阵。每个格子放一件宝贝。每个宝贝贴着价值标签。地宫的入口在左上角，出口在右下角。小明被带到地宫的入口，国王要求他只能向右或向下行走。走过某个格子时，如果那个格子中的宝贝价值比小明手中任意宝贝价值都大，小明就可以拿起它（当然，也可以不拿）。当小明走到出口时，如果他手中的宝贝恰好是k件，则这些宝贝就可以送给小明。请你帮小明算一算，在给定的局面下，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="风驻足的街道">
 <meta property="og:url" content="http://example.com/2022/04/25/%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="风驻足的街道">
 <meta property="og:description" content="描述 X 国王有一个地宫宝库。是 n x m 个格子的矩阵。每个格子放一件宝贝。每个宝贝贴着价值标签。地宫的入口在左上角，出口在右下角。小明被带到地宫的入口，国王要求他只能向右或向下行走。走过某个格子时，如果那个格子中的宝贝价值比小明手中任意宝贝价值都大，小明就可以拿起它（当然，也可以不拿）。当小明走到出口时，如果他手中的宝贝恰好是k件，则这些宝贝就可以送给小明。请你帮小明算一算，在给定的局面下，">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-25T15:55:17.736Z">
 <meta property="article:modified_time" content="2022-04-08T02:41:21.943Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta property="article:author" content="Danbobo">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>风驻足的街道</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
 
   
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
 
   
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 6.1.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-25 23:55" pubdate>
+        2022年4月25日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.9k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      33 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-地宫取宝" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/25/%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D/" class="article-date">
-  <time class="dt-published" datetime="2022-04-25T15:55:17.736Z" itemprop="datePublished">2022-04-25</time>
-</a>
+  <main>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>描述</strong></p>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <p><strong>描述</strong></p>
 <p>X 国王有一个地宫宝库。是 n x m 个格子的矩阵。每个格子放一件宝贝。每个宝贝贴着价值标签。<br>地宫的入口在左上角，出口在右下角。<br>小明被带到地宫的入口，国王要求他只能向右或向下行走。<br>走过某个格子时，如果那个格子中的宝贝价值比小明手中任意宝贝价值都大，小明就可以拿起它（当然，也可以不拿）。<br>当小明走到出口时，如果他手中的宝贝恰好是k件，则这些宝贝就可以送给小明。<br>请你帮小明算一算，在给定的局面下，他有多少种不同的行动方案能获得这k件宝贝。</p>
 <p><strong>输入</strong></p>
 <p>输入一行3个整数，用空格分开：n m k (1&lt;&#x3D;n,m&lt;&#x3D;50, 1&lt;&#x3D;k&lt;&#x3D;12)<br>接下来有 n 行数据，每行有 m 个整数 Ci (0&lt;&#x3D;Ci&lt;&#x3D;12)代表这个格子上的宝物的价值</p>
@@ -100,116 +252,192 @@
 <p>2 3 2<br>1 2 3<br>2 1 5</p>
 <p>样例输出2</p>
 <p>14</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.StreamTokenizer;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">static</span> Scanner sz=<span class="keyword">new</span> <span class="title class_">Scanner</span>(<span class="keyword">new</span> <span class="title class_">BufferedInputStream</span>(System.in));</span><br><span class="line">	<span class="keyword">static</span> StreamTokenizer in=<span class="keyword">new</span> <span class="title class_">StreamTokenizer</span>(<span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(System.in),<span class="number">32768</span>));</span><br><span class="line">	<span class="keyword">static</span> PrintWriter out=<span class="keyword">new</span> <span class="title class_">PrintWriter</span>(<span class="keyword">new</span> <span class="title class_">OutputStreamWriter</span>(System.out));</span><br><span class="line">	<span class="keyword">static</span> <span class="type">int</span> <span class="title function_">nextInt</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;in.nextToken();<span class="keyword">return</span> (<span class="type">int</span>) in.nval;&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> N=(<span class="type">int</span>)(<span class="number">1e5</span>+<span class="number">5</span>);</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> mod=(<span class="type">int</span>) (<span class="number">1e9</span>+<span class="number">7</span>);</span><br><span class="line">	<span class="keyword">static</span> <span class="type">int</span> n,m,num,dp[][][][],ma[][];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span><br><span class="line">	&#123;</span><br><span class="line">		 n=nextInt();</span><br><span class="line">		 m=nextInt();</span><br><span class="line">		 num=nextInt();</span><br><span class="line">		 ma=<span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">		 <span class="comment">//dp[i][j][k][l],四个状态 ， 在点(i,j)处取k件物品的最大价值为l的总方案数</span></span><br><span class="line">		 dp=<span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>][m+<span class="number">1</span>][<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line">		 <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		 &#123;</span><br><span class="line">			 <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">			 &#123;</span><br><span class="line">				 ma[i][j]=nextInt();</span><br><span class="line">				 <span class="comment">//价值范围变为1~13,0用来表示当k为0时取的最后一件物品的价值为0</span></span><br><span class="line">				 ma[i][j]++;</span><br><span class="line">			 &#125;</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="comment">//方法一 正向递推转移</span></span><br><span class="line"><span class="comment">//		 //初始化状态</span></span><br><span class="line"><span class="comment">//		 dp[1][1][1][ma[1][1]]=1; //起点拿宝物</span></span><br><span class="line"><span class="comment">//		 dp[1][1][0][0]=1; //起点不拿宝物</span></span><br><span class="line"><span class="comment">//		 </span></span><br><span class="line"><span class="comment">//		 从前往后推</span></span><br><span class="line"><span class="comment">//		 //x点左标</span></span><br><span class="line"><span class="comment">//		 for(int i=1;i&lt;=n;i++)</span></span><br><span class="line"><span class="comment">//		 &#123;</span></span><br><span class="line"><span class="comment">//			 //y点坐标</span></span><br><span class="line"><span class="comment">//			 for(int j=1;j&lt;=m;j++) </span></span><br><span class="line"><span class="comment">//			 &#123;</span></span><br><span class="line"><span class="comment">//				 for(int k=0;k&lt;=num;k++) //物品数</span></span><br><span class="line"><span class="comment">//				 &#123;</span></span><br><span class="line"><span class="comment">//					 for(int l=0;l&lt;=13;l++) //最大价值数</span></span><br><span class="line"><span class="comment">//					 &#123;</span></span><br><span class="line"><span class="comment">//						 //不取</span></span><br><span class="line"><span class="comment">//						 //向下走转移</span></span><br><span class="line"><span class="comment">//						 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i-1][j][k][l])%mod;</span></span><br><span class="line"><span class="comment">//						 //向右走转移</span></span><br><span class="line"><span class="comment">//						 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i][j-1][k][l])%mod;</span></span><br><span class="line"><span class="comment">//						 </span></span><br><span class="line"><span class="comment">//						 //取 物品数要大于0 </span></span><br><span class="line"><span class="comment">//						 //将上一步向下，向右走的所有最大值数小于l的方案全部累加起来</span></span><br><span class="line"><span class="comment">//						 if(ma[i][j]==l &amp;&amp; k&gt;0)</span></span><br><span class="line"><span class="comment">//						 &#123;</span></span><br><span class="line"><span class="comment">//							 for(int c=0;c&lt;l;c++)</span></span><br><span class="line"><span class="comment">//							 &#123;</span></span><br><span class="line"><span class="comment">//								//向下走转移</span></span><br><span class="line"><span class="comment">//								 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i-1][j][k-1][c])%mod;</span></span><br><span class="line"><span class="comment">//								 //向右走转移</span></span><br><span class="line"><span class="comment">//								 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i][j-1][k-1][c])%mod;</span></span><br><span class="line"><span class="comment">//								 </span></span><br><span class="line"><span class="comment">//							 &#125;</span></span><br><span class="line"><span class="comment">//						 &#125;</span></span><br><span class="line"><span class="comment">//					 &#125;</span></span><br><span class="line"><span class="comment">//				 &#125;</span></span><br><span class="line"><span class="comment">//			 &#125;</span></span><br><span class="line"><span class="comment">//		 &#125;</span></span><br><span class="line"><span class="comment">//		 int ans=0;</span></span><br><span class="line"><span class="comment">//		 for(int i=1;i&lt;=13;i++)</span></span><br><span class="line"><span class="comment">//		 &#123;</span></span><br><span class="line"><span class="comment">//			 ans=(ans+dp[n][m][num][i])%mod;</span></span><br><span class="line"><span class="comment">//		 &#125;</span></span><br><span class="line"><span class="comment">//		  out.println(ans);</span></span><br><span class="line">		 </span><br><span class="line">		 <span class="comment">//方法二. 记忆化搜索，从后往前推进</span></span><br><span class="line">		 init();</span><br><span class="line">		  out.println(dfs(<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">		  out.flush();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//初始化dp值，防止方案数为0的步骤重复判别</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;=n; i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt;= m; j++)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; <span class="number">15</span>; k++)&#123;</span><br><span class="line">					<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> <span class="number">0</span>; l &lt; <span class="number">15</span>; l++)&#123;</span><br><span class="line">						dp[i][j][k][l] = -<span class="number">1</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//（x,y）当前位置   cnt拥有宝物的数量  val拥有的宝物的最大值</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y,<span class="type">int</span> cnt,<span class="type">int</span> val)</span> </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//出界判断</span></span><br><span class="line">		<span class="keyword">if</span>(x&gt;n || y&gt;m || cnt&gt;num)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="comment">//重复判别</span></span><br><span class="line">		<span class="keyword">if</span>(dp[x][y][cnt][val]!=-<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> dp[x][y][cnt][val];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//到达出口</span></span><br><span class="line">		<span class="keyword">if</span>(x==n &amp;&amp; y==m)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//满足条件，1. 已经取了num件宝物 或者 2. 是取了当前格宝物后为num件宝物</span></span><br><span class="line">			<span class="keyword">if</span>(cnt==num || (cnt==num-<span class="number">1</span> &amp;&amp; val&lt;ma[x][y]))</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> dp[x][y][cnt][val]=<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		<span class="comment">//取</span></span><br><span class="line">		<span class="keyword">if</span>(ma[x][y]&gt;val)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//向下走</span></span><br><span class="line">			ans+=dfs(x+<span class="number">1</span>, y, cnt+<span class="number">1</span>, ma[x][y]);</span><br><span class="line">			ans%=mod;</span><br><span class="line">			<span class="comment">//向右走</span></span><br><span class="line">			ans+=dfs(x, y+<span class="number">1</span>, cnt+<span class="number">1</span>, ma[x][y]);</span><br><span class="line">			ans%=mod;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//不取</span></span><br><span class="line">		<span class="comment">//向下走</span></span><br><span class="line">		ans+=dfs(x+<span class="number">1</span>, y, cnt, val);</span><br><span class="line">		ans%=mod;</span><br><span class="line">		<span class="comment">//向右走</span></span><br><span class="line">		ans+=dfs(x, y+<span class="number">1</span>, cnt, val);</span><br><span class="line">		ans%=mod;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> dp[x][y][cnt][val]=ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.io.BufferedInputStream;<br><span class="hljs-keyword">import</span> java.io.BufferedReader;<br><span class="hljs-keyword">import</span> java.io.InputStreamReader;<br><span class="hljs-keyword">import</span> java.io.OutputStreamWriter;<br><span class="hljs-keyword">import</span> java.io.PrintWriter;<br><span class="hljs-keyword">import</span> java.io.StreamTokenizer;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Collection;<br><span class="hljs-keyword">import</span> java.util.Collections;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><span class="hljs-keyword">import</span> java.util.HashMap;<br><span class="hljs-keyword">import</span> java.util.HashSet;<br><span class="hljs-keyword">import</span> java.util.LinkedList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.Map;<br><span class="hljs-keyword">import</span> java.util.Queue;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">import</span> java.util.Set;<br><span class="hljs-keyword">import</span> java.util.Stack;<br><span class="hljs-keyword">import</span> java.util.TreeSet;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> <br>&#123;<br>	<span class="hljs-keyword">static</span> Scanner sz=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedInputStream</span>(System.in));<br>	<span class="hljs-keyword">static</span> StreamTokenizer in=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StreamTokenizer</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">InputStreamReader</span>(System.in),<span class="hljs-number">32768</span>));<br>	<span class="hljs-keyword">static</span> PrintWriter out=<span class="hljs-keyword">new</span> <span class="hljs-title class_">PrintWriter</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">OutputStreamWriter</span>(System.out));<br>	<span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">nextInt</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;in.nextToken();<span class="hljs-keyword">return</span> (<span class="hljs-type">int</span>) in.nval;&#125;<br><br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> N=(<span class="hljs-type">int</span>)(<span class="hljs-number">1e5</span>+<span class="hljs-number">5</span>);<br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> mod=(<span class="hljs-type">int</span>) (<span class="hljs-number">1e9</span>+<span class="hljs-number">7</span>);<br>	<span class="hljs-keyword">static</span> <span class="hljs-type">int</span> n,m,num,dp[][][][],ma[][];<br>	<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception<br>	&#123;<br>		 n=nextInt();<br>		 m=nextInt();<br>		 num=nextInt();<br>		 ma=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>][m+<span class="hljs-number">1</span>];<br>		 <span class="hljs-comment">//dp[i][j][k][l],四个状态 ， 在点(i,j)处取k件物品的最大价值为l的总方案数</span><br>		 dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>][m+<span class="hljs-number">1</span>][<span class="hljs-number">15</span>][<span class="hljs-number">15</span>];<br>		 <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>		 &#123;<br>			 <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)<br>			 &#123;<br>				 ma[i][j]=nextInt();<br>				 <span class="hljs-comment">//价值范围变为1~13,0用来表示当k为0时取的最后一件物品的价值为0</span><br>				 ma[i][j]++;<br>			 &#125;<br>		 &#125;<br>		 <span class="hljs-comment">//方法一 正向递推转移</span><br><span class="hljs-comment">//		 //初始化状态</span><br><span class="hljs-comment">//		 dp[1][1][1][ma[1][1]]=1; //起点拿宝物</span><br><span class="hljs-comment">//		 dp[1][1][0][0]=1; //起点不拿宝物</span><br><span class="hljs-comment">//		 </span><br><span class="hljs-comment">//		 从前往后推</span><br><span class="hljs-comment">//		 //x点左标</span><br><span class="hljs-comment">//		 for(int i=1;i&lt;=n;i++)</span><br><span class="hljs-comment">//		 &#123;</span><br><span class="hljs-comment">//			 //y点坐标</span><br><span class="hljs-comment">//			 for(int j=1;j&lt;=m;j++) </span><br><span class="hljs-comment">//			 &#123;</span><br><span class="hljs-comment">//				 for(int k=0;k&lt;=num;k++) //物品数</span><br><span class="hljs-comment">//				 &#123;</span><br><span class="hljs-comment">//					 for(int l=0;l&lt;=13;l++) //最大价值数</span><br><span class="hljs-comment">//					 &#123;</span><br><span class="hljs-comment">//						 //不取</span><br><span class="hljs-comment">//						 //向下走转移</span><br><span class="hljs-comment">//						 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i-1][j][k][l])%mod;</span><br><span class="hljs-comment">//						 //向右走转移</span><br><span class="hljs-comment">//						 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i][j-1][k][l])%mod;</span><br><span class="hljs-comment">//						 </span><br><span class="hljs-comment">//						 //取 物品数要大于0 </span><br><span class="hljs-comment">//						 //将上一步向下，向右走的所有最大值数小于l的方案全部累加起来</span><br><span class="hljs-comment">//						 if(ma[i][j]==l &amp;&amp; k&gt;0)</span><br><span class="hljs-comment">//						 &#123;</span><br><span class="hljs-comment">//							 for(int c=0;c&lt;l;c++)</span><br><span class="hljs-comment">//							 &#123;</span><br><span class="hljs-comment">//								//向下走转移</span><br><span class="hljs-comment">//								 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i-1][j][k-1][c])%mod;</span><br><span class="hljs-comment">//								 //向右走转移</span><br><span class="hljs-comment">//								 dp[i][j][k][l]=(dp[i][j][k][l]+dp[i][j-1][k-1][c])%mod;</span><br><span class="hljs-comment">//								 </span><br><span class="hljs-comment">//							 &#125;</span><br><span class="hljs-comment">//						 &#125;</span><br><span class="hljs-comment">//					 &#125;</span><br><span class="hljs-comment">//				 &#125;</span><br><span class="hljs-comment">//			 &#125;</span><br><span class="hljs-comment">//		 &#125;</span><br><span class="hljs-comment">//		 int ans=0;</span><br><span class="hljs-comment">//		 for(int i=1;i&lt;=13;i++)</span><br><span class="hljs-comment">//		 &#123;</span><br><span class="hljs-comment">//			 ans=(ans+dp[n][m][num][i])%mod;</span><br><span class="hljs-comment">//		 &#125;</span><br><span class="hljs-comment">//		  out.println(ans);</span><br>		 <br>		 <span class="hljs-comment">//方法二. 记忆化搜索，从后往前推进</span><br>		 init();<br>		  out.println(dfs(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));<br>		  out.flush();<br>	&#125;<br><br>	<span class="hljs-comment">//初始化dp值，防止方案数为0的步骤重复判别</span><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span><br>	&#123;<br>		<span class="hljs-comment">// TODO Auto-generated method stub</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;=n; i++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; j &lt;= m; j++)&#123;<br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">k</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; k &lt; <span class="hljs-number">15</span>; k++)&#123;<br>					<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">l</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; l &lt; <span class="hljs-number">15</span>; l++)&#123;<br>						dp[i][j][k][l] = -<span class="hljs-number">1</span>;<br>					&#125;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-comment">//（x,y）当前位置   cnt拥有宝物的数量  val拥有的宝物的最大值</span><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y,<span class="hljs-type">int</span> cnt,<span class="hljs-type">int</span> val)</span> <br>	&#123;<br>		<span class="hljs-comment">//出界判断</span><br>		<span class="hljs-keyword">if</span>(x&gt;n || y&gt;m || cnt&gt;num)<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>		<span class="hljs-comment">//重复判别</span><br>		<span class="hljs-keyword">if</span>(dp[x][y][cnt][val]!=-<span class="hljs-number">1</span>)<br>		&#123;<br>			<span class="hljs-keyword">return</span> dp[x][y][cnt][val];<br>		&#125;<br>		<span class="hljs-comment">//到达出口</span><br>		<span class="hljs-keyword">if</span>(x==n &amp;&amp; y==m)<br>		&#123;<br>			<span class="hljs-comment">//满足条件，1. 已经取了num件宝物 或者 2. 是取了当前格宝物后为num件宝物</span><br>			<span class="hljs-keyword">if</span>(cnt==num || (cnt==num-<span class="hljs-number">1</span> &amp;&amp; val&lt;ma[x][y]))<br>			&#123;<br>				<span class="hljs-keyword">return</span> dp[x][y][cnt][val]=<span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>		&#125;<br>		<span class="hljs-type">int</span> ans=<span class="hljs-number">0</span>;<br>		<span class="hljs-comment">//取</span><br>		<span class="hljs-keyword">if</span>(ma[x][y]&gt;val)<br>		&#123;<br>			<span class="hljs-comment">//向下走</span><br>			ans+=dfs(x+<span class="hljs-number">1</span>, y, cnt+<span class="hljs-number">1</span>, ma[x][y]);<br>			ans%=mod;<br>			<span class="hljs-comment">//向右走</span><br>			ans+=dfs(x, y+<span class="hljs-number">1</span>, cnt+<span class="hljs-number">1</span>, ma[x][y]);<br>			ans%=mod;<br>		&#125;<br>		<br>		<span class="hljs-comment">//不取</span><br>		<span class="hljs-comment">//向下走</span><br>		ans+=dfs(x+<span class="hljs-number">1</span>, y, cnt, val);<br>		ans%=mod;<br>		<span class="hljs-comment">//向右走</span><br>		ans+=dfs(x, y+<span class="hljs-number">1</span>, cnt, val);<br>		ans%=mod;<br>		<br>		<span class="hljs-keyword">return</span> dp[x][y][cnt][val]=ans;<br>	&#125;<br>&#125;<br> <br></code></pre></td></tr></table></figure>
 
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/25/%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D/" data-id="cl2ewrdhh0001isi3d0pb09js" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/04/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/25/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/25/%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/25/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+            
+          </article>
+        </div>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
   </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
+
+  <!-- SCRIPTS -->
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <script  src="/js/img-lazyload.js" ></script>
   
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
 
 
 
 
 
-  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 </body>
 </html>
